@@ -24,6 +24,7 @@ var path = {
 }
 
 module.exports = {
+  "path": path,
   "source": {
     sass: ['./src/**/*.scss', 'src/**/*.scss'],
     js: ['./src/**/*.js', 'src/**/*.js'],

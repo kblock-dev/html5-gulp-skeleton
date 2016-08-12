@@ -2,7 +2,8 @@ var config = require('./gulpconfig.js');
 var source = config.source,
     output = config.output,
     site = config.site,
-    path = config.path;
+    path = config.path,
+    bundles = config.bundles;
 
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
