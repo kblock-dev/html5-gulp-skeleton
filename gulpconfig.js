@@ -2,6 +2,9 @@ var path = {
   root: './wwwroot/',
   bower: './bower_components/',
   layout: './wwwroot/index.html',
+  excluded: {
+    js: ['./wwwroot/js/modernizer*.js']
+  },
   output: {
     css: './wwwroot/css/',
     js: './wwwroot/js/',
@@ -27,7 +30,7 @@ module.exports = {
   "path": path,
   "source": {
     sass: ['./src/**/*.scss', 'src/**/*.scss'],
-    js: ['./src/**/*.js', 'src/**/*.js'],
+    js: ['./src/**/*.js', 'src/**/*.js', path.excluded.js.map(function(val){ return "!" + val; }).join(',')],
     jquery: path.bower + 'jquery/dist/**/*.js',
     bootstrap:{
       scss: path.bower + 'bootstrap-sass/assets/stylesheets/**/*.scss',
@@ -48,6 +51,7 @@ module.exports = {
   },
   "bundles": {
     css: path.output.css + "**/*-*.min.css",
-    js: path.output.js + '**/*-*.min.js' // Change this to .min.js when js minification implemented
+    js: path.output.js + '**/*-*.min.js',
+    modernizer: path.output.js + 'modernizr-*.js'
   }
 }
