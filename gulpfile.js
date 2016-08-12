@@ -1,4 +1,8 @@
-require('./gulpconfig.js');
+var config = require('./gulpconfig.js');
+var source = config.source,
+    output = config.output,
+    site = config.site,
+    path = config.path;
 
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
