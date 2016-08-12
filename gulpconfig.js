@@ -1,11 +1,3 @@
-//var ;
-
-//var source = ;
-//var output = ;
-
-//var site = ;
-
-//var bundles = ;
 var path = {
   root: './wwwroot/',
   bower: './bower_components/',
