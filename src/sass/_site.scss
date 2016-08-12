@@ -1,0 +1,28 @@
+@import 'variables';
+
+html, body {
+  min-height: 100%;
+}
+
+body{
+  background-color: lighten(black, 5%);
+}
+
+.main-content, .footer{
+  background-color: lighten(black, 15%);
+  opacity: .7;
+  color: darken(#fff, 20%);
+}
+
+.main-content {
+  min-height: 90%;
+  //border: 1px red dashed;
+  padding-top: 80px;
+  //background-color: lighten(#000, 15%);
+  //color: darken(#fff, 15%);
+}
+
+.footer{
+  min-height: 10%;
+  //border: 1px blue dashed;
+}
