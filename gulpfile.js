@@ -118,10 +118,18 @@ gulp.task('inject-css', ['sass'], function(){
 gulp.task('inject-js', ['js'], function(){
   gutil.log(gutil.colors.green('Injecting JS into layout'));
   var target = gulp.src(path.layout);
-  var sources = gulp.src(bundles.js, {read: false}, {base: output.js});
+  var sources = gulp.src(bundles.js, {read: false});
 
   return target.pipe(inject(sources, {relative: true}))
-               .pipe(inject(gulp.src(bundles.modernizer, { relative: true }), { name: 'modernizer' }))
+               .pipe(gulp.dest(path.root));
+});
+
+gulp.task('inject-modernizer', function(){
+  gutil.log(gutil.colors.green('Injecting JS into layout'));
+  var target = gulp.src(path.layout);
+  var sources = gulp.src(bundles.modernizer, {read: false});
+
+  return target.pipe(inject(sources), {name: "modernizer"})
                .pipe(gulp.dest(path.root));
 });
 

@@ -13,4 +13,6 @@ $(document).ready(function(){
     $('nav li.active').removeClass('active');
     $(this).parent().addClass('active');
   });
+
+  //$('nav').addClass('hide');
 });

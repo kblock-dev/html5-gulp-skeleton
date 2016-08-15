@@ -51,7 +51,7 @@ module.exports = {
   },
   "bundles": {
     css: path.output.css + "**/*-*.min.css",
-    js: path.output.js + '**/*-*.min.js',
+    js: [path.output.js + '**/*-*.min.js'],
     modernizer: path.output.js + 'modernizr-*.js'
   }
 }
